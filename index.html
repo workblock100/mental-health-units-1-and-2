@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATI Mental Health Units 1 & 2 Study Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>🧠 ATI Mental Health</h1>
+      <p class="subtitle">Units 1 & 2: Legal/Ethical, Communication, Anxiety, Safety</p>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+        <span class="progress-text" id="progressText">0% Complete</span>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <button class="nav-btn active" data-section="concepts">📚 Concepts</button>
+    <button class="nav-btn" data-section="quiz">❓ Quiz</button>
+    <button class="nav-btn" data-section="flashcards">🎴 Flashcards</button>
+    <button class="nav-btn" data-section="labs">🩸 Labs</button>
+    <button class="nav-btn" data-section="meds">💊 Meds</button>
+    <button class="nav-btn" data-section="critical">🚩 Critical Points</button>
+  </nav>
+
+  <main>
+    <!-- Concepts Section -->
+    <section id="concepts" class="content-section active">
+      <h2>Key Concepts</h2>
+      <div class="concepts-container" id="conceptsContainer"></div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="content-section">
+      <h2>NCLEX-Style Practice Questions</h2>
+      <div class="quiz-container">
+        <div class="quiz-progress">
+          <span id="questionNumber">Question 1 of 15</span>
+          <span id="quizScore">Score: 0/0</span>
+        </div>
+        <div id="questionContainer"></div>
+        <div class="quiz-controls">
+          <button id="prevQuestion" class="control-btn" disabled>← Previous</button>
+          <button id="nextQuestion" class="control-btn">Next →</button>
+        </div>
+        <div id="quizResults" class="quiz-results hidden"></div>
+      </div>
+    </section>
+
+    <!-- Flashcards Section -->
+    <section id="flashcards" class="content-section">
+      <h2>Flashcards</h2>
+      <div class="flashcard-controls">
+        <button id="shuffleCards" class="control-btn">🔀 Shuffle</button>
+        <span id="cardCounter">Card 1 of 54</span>
+        <button id="resetCards" class="control-btn">↺ Reset</button>
+      </div>
+      <div class="flashcard-container">
+        <div class="flashcard" id="flashcard">
+          <div class="flashcard-inner">
+            <div class="flashcard-front" id="cardFront"></div>
+            <div class="flashcard-back" id="cardBack"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flashcard-nav">
+        <button id="prevCard" class="nav-arrow">←</button>
+        <span class="flip-hint">Click card to flip</span>
+        <button id="nextCard" class="nav-arrow">→</button>
+      </div>
+      <div class="mastery-controls">
+        <button id="markKnown" class="mastery-btn known">✓ Know It</button>
+        <button id="markReview" class="mastery-btn review">⟳ Review Again</button>
+      </div>
+    </section>
+
+    <!-- Labs Section -->
+    <section id="labs" class="content-section">
+      <h2>Lab Values</h2>
+      <div class="lab-note">
+        <strong>Remember:</strong> Always rule out MEDICAL causes before assuming psychiatric diagnosis!
+      </div>
+      <div class="labs-container" id="labsContainer"></div>
+    </section>
+
+    <!-- Medications Section -->
+    <section id="meds" class="content-section">
+      <h2>Medications</h2>
+      <div class="meds-container" id="medsContainer"></div>
+    </section>
+
+    <!-- Critical Points Section -->
+    <section id="critical" class="content-section">
+      <h2>🚩 Critical Points to Remember</h2>
+      <div class="critical-container" id="criticalContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ATI Mental Health Study Guide | Created for NCLEX Success</p>
+    <p class="footer-note">Last Updated: <span id="lastUpdated"></span></p>
+  </footer>
+
+  <script src="studyData.js"></script>
+  <script src="app.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
